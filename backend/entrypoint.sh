@@ -22,7 +22,7 @@ fi
 
 # Wait for MySQL/PostgreSQL
 echo "Waiting for database..."
-while ! nc -z mysql 3306; do
+while ! nc -z database 3306; do
     echo "Database is unavailable - sleeping"
     sleep 2
 done
