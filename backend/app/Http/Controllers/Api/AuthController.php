@@ -9,7 +9,6 @@ use Illuminate\Http\JsonResponse;
 use App\Http\Requests\LoginRequest;
 use App\Http\Resources\LoginResource;
 use App\Http\Requests\RefreshTokenRequest;
-use App\Exceptions\InvalidTokenException;
 class AuthController extends Controller
 {
 
