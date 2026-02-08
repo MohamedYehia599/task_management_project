@@ -14,7 +14,7 @@ A RESTful API for task management with role-based access control, task dependenc
 
 1. **Clone the repository**
 ```bash
-git clone <https://github.com/MohamedYehia599/task_management_project>
+git clone https://github.com/MohamedYehia599/task_management_project
 cd task_management_project
 ```
 
