@@ -1,0 +1,96 @@
+# Laravel specific (INSIDE backend/ folder)
+backend/vendor/
+backend/node_modules/
+backend/public/hot
+backend/public/storage
+backend/storage/*.key
+backend/storage/framework/cache/data/*
+backend/storage/framework/sessions/*
+backend/storage/framework/testing/*
+backend/storage/framework/views/*
+backend/storage/logs/*
+
+# Environment files
+# NOTE: .env is INCLUDED for interview task (not production!)
+backend/.env.backup
+backend/.env.production
+backend/.env.local
+backend/.env.*.local
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# PHPStorm
+backend/.phpstorm.meta.php
+backend/_ide_helper.php
+backend/_ide_helper_models.php
+
+# Testing
+backend/coverage/
+backend/.phpunit.result.cache
+backend/.phpunit.cache
+
+# Build files
+backend/public/build/
+backend/public/mix-manifest.json
+backend/npm-debug.log
+backend/yarn-error.log
+
+# Laravel specific cache
+backend/bootstrap/cache/*
+!backend/bootstrap/cache/.gitkeep
+
+# Composer
+backend/composer.phar
+backend/composer.lock
+
+# npm/yarn
+backend/package-lock.json
+backend/yarn.lock
+
+# Docker volumes (data persists in named volumes)
+mysql_data/
+redis_data/
+
+# Logs
+*.log
+backend/laravel.log
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+**/.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+
+# Node
+backend/node_modules/
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+
+# Docker
+docker-compose.override.yml
+docker-compose.*.yml
+.docker/
+
+# Laravel Sail (if using)
+sail

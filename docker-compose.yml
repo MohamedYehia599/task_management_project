@@ -1,0 +1,49 @@
+version: "3.8"
+
+services:
+  backend:
+    env_file:
+      - ./backend/.env 
+    networks:
+      - laravel_network
+    container_name: backend
+    build: ./backend
+    depends_on:
+      - database
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+
+  database:
+    networks:
+      - laravel_network
+    image: mysql:8
+    container_name: database
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  redis:
+    networks:
+      - laravel_network
+    image: redis:7-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+networks:
+  laravel_network:
+    driver: bridge
+
+volumes:
+  mysql_data:
+  redis_data:
